@@ -5,6 +5,8 @@ import CardBackground from "./components/card/CardBackground";
 import Content from "./components/content/Content";
 import Materi1 from "./components/materi/Materi1";
 import Materi2 from "./components/materi/Materi2";
+import Game1 from "./components/game/Game1";
+import Game2 from "./components/game/Game2";
 import Image from "./assets/Image.jsx";
 
 const content = [
@@ -103,6 +105,21 @@ function App() {
           <Materi2 />
         </CardBackground>
       </div>
+
+      <div className="container container-content">
+        <h1 className="judulContent">Game 1</h1>
+        <CardBackground>
+          <Game1 />
+        </CardBackground>
+      </div>
+
+      <div className="container container-content">
+        <h1 className="judulContent">Game 2</h1>
+        <CardBackground>
+          <Game2 />
+        </CardBackground>
+      </div>
+      
     </>
   );
 }

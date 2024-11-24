@@ -1,0 +1,215 @@
+.game-container {
+    padding: 2rem;
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .game-header {
+    margin-bottom: 2rem;
+  }
+  
+  .game-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    background: linear-gradient(to right, #22d3ee, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .game-subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+  }
+  
+  .game-tebak {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-lives {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-life {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    transition: background-color 0.3s ease;
+  }
+  
+  .game-life.dead {
+    background-color: #ef4444;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+  }
+  
+  .input-section {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e2e8f0;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-label svg {
+    color: #22d3ee;
+  }
+  
+  .customm-input {
+    width: 10%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-input:focus {
+    outline: none;
+    border-color: #22d3ee;
+    box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+  }
+  
+  .custom-input::placeholder {
+    color: #64748b;
+  }
+  
+  .status-message {
+    color: #94a3b8;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+  
+  .submit-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #22d3ee, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 12px rgba(34, 211, 238, 0.25);
+  }
+  
+  .submit-button:enabled:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 211, 238, 0.35);
+  }
+  
+  .submit-button:disabled {
+    background: #1e293b;
+    color: #64748b;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .submit-button.retry {
+    background: linear-gradient(to right, red, red);
+  }
+  
+  .submit-button.retry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35);
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+  }
+  .error-message {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .error-message.low {
+    background-color: rgba(239, 68, 68, 0.2); 
+    border: 1px solid red;
+  }
+  
+  .error-message.high {
+    background-color: rgba(239, 68, 68, 0.2); 
+    border: 1px solid red;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .input-section {
+    animation: slideIn 0.5s ease forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+  }
+  
+  @media (max-width: 768px) {
+    .game-container {
+      padding: 1rem;
+    }
+  
+    .input-section {
+      padding: 1rem;
+    }
+  
+    .custom-input {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  
+  .Toastify__toast {
+    background: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .Toastify__toast-body {
+    color: white;
+  }
+  
+  .Toastify__progress-bar {
+    background: linear-gradient(to right, #22d3ee, #3b82f6) !important;
+  }
+  

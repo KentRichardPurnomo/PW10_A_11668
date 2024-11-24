@@ -1,0 +1,167 @@
+.guess-container {
+    padding: 2rem;
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .game-header {
+    margin-bottom: 2rem;
+  }
+  
+  .game-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    background: linear-gradient(to right, #22d3ee, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .game-instruction {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .color-box {
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timer {
+    margin: 1rem auto;
+    color: #f87171;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .timer-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
+  }
+  
+  
+  .color-input {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(15, 23, 42, 0.6);
+    color: white;
+    width: 60%;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .color-input:focus {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  
+  .submitt-button {
+    display: block; 
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #22d3ee, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 12px rgba(34, 211, 238, 0.25);
+  }
+  
+  .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(34, 211, 238, 0.4);
+  }
+  
+  .score {
+    color: #94a3b8;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .game-over-section {
+    text-align: center;
+  }
+  
+  .game-over-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f87171;
+  }
+  
+  .final-score {
+    font-size: 1.5rem;
+    color: #3b82f6;
+  }
+  
+  .retry-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, #f87171, #ef4444);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .retry-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .input-section {
+    animation: slideIn 0.5s ease forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+  }
+  
+  @media (max-width: 768px) {
+    .game-container {
+      padding: 1rem;
+    }
+  
+    .input-section {
+      padding: 1rem;
+    }
+  
+    .custom-input {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  
+  .Toastify__toast {
+    background: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .Toastify__toast-body {
+    color: white;
+  }
+  
+  .Toastify__progress-bar {
+    background: linear-gradient(to right, #22d3ee, #3b82f6) !important;
+  }
+  
